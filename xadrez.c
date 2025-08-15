@@ -1,7 +1,10 @@
 #include <stdio.h>
 int main()
 {
+    // Declaração das Variável
     int opcao, quantiddade_de_movimentos;
+
+    // Exibe o menu para a escolha da peça a ser movida
 
     printf("----- Jogo Xadrez -----------\n");
     printf("Escolha uma peça para mover: \n");
@@ -14,6 +17,7 @@ int main()
     switch (opcao)
     {
     case 1:
+        // Logica de movimentação usando o FOR
         printf("Digite a quantidade de casas que deseja andar: \n");
         scanf("%d", &quantiddade_de_movimentos);
         for (int i = 0; i < quantiddade_de_movimentos; i++)
@@ -22,6 +26,7 @@ int main()
         }
         break;
     case 2:
+        // Logica de movimentação usando o While
         printf("Digite a quantidade de casas que deseja andar: \n");
         scanf("%d", &quantiddade_de_movimentos);
         int i = 0;
@@ -33,6 +38,7 @@ int main()
         break;
 
     case 3:
+        // Logica de movimentação usando o Do While
         printf("Digite a quantidade de casas que deseja andar: \n");
         scanf("%d", &quantiddade_de_movimentos);
         int j = 0;
