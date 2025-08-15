@@ -53,6 +53,7 @@ int main()
         break;
     default:
         printf("Opção invalida");
+        printf("Saindo do programa");
         return 0;
         break;
     }
