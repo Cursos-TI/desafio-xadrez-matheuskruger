@@ -1,23 +1,21 @@
 #include <stdio.h>
 int main()
 {
-    // Declaração das Variável
     int opcao, quantiddade_de_movimentos;
-
-    // Exibe o menu para a escolha da peça a ser movida
-
-    printf("----- Jogo Xadrez -----------\n");
+    // Exibe o menu para escolha de qual peça mover
+    printf("----- Jogo Xadrez -----------\n");4
     printf("Escolha uma peça para mover: \n");
     printf("1- Rainha \n");
     printf("2- Bispo \n");
     printf("3- Torre \n");
+    printf("4- Cavalo \n");
     printf("Digite uma opção:  \n");
     scanf("%d", &opcao);
 
     switch (opcao)
     {
     case 1:
-        // Logica de movimentação usando o FOR
+        // Rainha: movimento repetido com for
         printf("Digite a quantidade de casas que deseja andar: \n");
         scanf("%d", &quantiddade_de_movimentos);
         for (int i = 0; i < quantiddade_de_movimentos; i++)
@@ -26,7 +24,7 @@ int main()
         }
         break;
     case 2:
-        // Logica de movimentação usando o While
+        // Bispo: movimento repetido com while
         printf("Digite a quantidade de casas que deseja andar: \n");
         scanf("%d", &quantiddade_de_movimentos);
         int i = 0;
@@ -38,7 +36,8 @@ int main()
         break;
 
     case 3:
-        // Logica de movimentação usando o Do While
+        // Torre: movimento repetido com do...while
+
         printf("Digite a quantidade de casas que deseja andar: \n");
         scanf("%d", &quantiddade_de_movimentos);
         int j = 0;
@@ -51,9 +50,23 @@ int main()
         } while (j < quantiddade_de_movimentos);
 
         break;
+    case 4:
+        // Cavalo: movimento composto usando for e while
+        int k = 1;
+        for (int i = 1; i < 2; i++)
+            printf("\n");
+        {
+            while (k <= 2)
+            {
+                printf("Baixo,");
+                k++;
+            }
+            printf("Esquerda");
+        }
+        break;
     default:
-        printf("Opção invalida");
-        printf("Saindo do programa");
+        printf("Opção invalida\n");
+        printf("Saindo do programa\n");
         return 0;
         break;
     }
